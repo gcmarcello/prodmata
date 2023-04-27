@@ -10,6 +10,8 @@ const port: number = process.env.PORT ? parseInt(process.env.PORT) : 5000;
 app.use(express.json());
 app.use(cors());
 
+app.use("/api/beats", require("./routes/beats"));
+
 app.listen(port, (): void => {
   console.log(
     `\n----------------------------------------------------------------\nServer running on port ${port} - NODE_ENV = ${process.env.NODE_ENV}\n----------------------------------------------------------------\n`

@@ -9,4 +9,4 @@ const config = `postgresql://${process.env.PG_USERNAME}:${process.env.PG_PASSWOR
 
 const pool = new Pool({ connectionString: config });
 
-module.exports = pool;
+export default pool;
